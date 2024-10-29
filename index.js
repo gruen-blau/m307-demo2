@@ -22,6 +22,14 @@ app.get("/newpost", async function (req, res) {
   res.render("newpost", {});
 });
 
+app.post("/create_post", async function (req, res) {
+  await app.locals.pool.query(
+    "INSERT INTO posts (title, picture, text, likenumber, type, upload, submit) VALUES ($1, $2, $3, $4, $5, $6, $7)",
+    [req.body.image, req.body.title, req.body.text, req.body.file]
+  );
+  res.redirect("/");
+});
+
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
 app.listen(3010, () => {
   console.log(`Example app listening at http://localhost:3010`);

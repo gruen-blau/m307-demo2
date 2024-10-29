@@ -8,27 +8,18 @@
   </head>
 
   <body>
-    <header>
-      <a href="/">Logo</a>
-      <a href="/">BM</a>
-      <a href="/">MDM</a>
-      <form action="/suche" method="get">
-        <input type="text" placeholder="Suche..." name="search" />
-        <button type="submit">Suchen</button>
-      </form>
-      <a href="/profil" class="profile-button">
-        <img src="profilbild.jpg" alt="Profilbild" />
-      </a>
-    </header>
 
+    <form action="/create_post" method="post">
+      <input type="title" name="title" />
+      <input type="text" name="picture" />
+      <input type="text" name="text" />
+      <input type="number" name="likenumber" />
+      <input type="text" name="type"/>
+      <input type="file" name="upload"/>
+      <input type="submit" name="submit/>
+    </form>
     {{{body}}}
 
-    <footer>
-      <a href="/">Logo</a>
-      <a href="/">BM</a>
-      <a href="/">MDM</a>
-      <a href="/impressum">Impressum</a>
-    </footer>
   </body>
 
 </html>
