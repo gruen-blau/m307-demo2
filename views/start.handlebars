@@ -1,7 +1,14 @@
 <h1>Startseite</h1>
 
 <p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
-
+{{#posts}}
+<h3> {{title}} </h3>
+<p>{{picture}}</p>
+<p>{{text}}</p>
+<p>{{likenumber}}</p>
+<p>{{type}}</p>
+<p>{{file}}</p>
+{{/posts}}
 <div class="mainconatiner-start">
 <div class="karte">
     <div class="karte-inhalt">
@@ -11,6 +18,7 @@
     <img src="coverbild" alt="">
     <h3>Titel</h3>
     <p>Kurz beschreibung</p>
+
 </div>
 </div>
 </div>
