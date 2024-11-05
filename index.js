@@ -30,6 +30,10 @@ app.post("/create_post", async function (req, res) {
   res.redirect("/");
 });
 
+app.get("/bm-posts", async function (req, res) {
+  res.render("bm-posts", {});
+});
+
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
 app.listen(3010, () => {
   console.log(`Example app listening at http://localhost:3010`);

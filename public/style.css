@@ -72,3 +72,38 @@ footer a {
   padding-top: 20px;
   padding-left: 20px;
 }
+
+.grid-bm {
+  padding-top: 20px;
+  display: grid;
+  grid-gap: 15px;
+  grid-auto-flow: dense;
+  margin-top: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 4%;
+  grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i"
+    "j k l";
+}
+
+.bm-post {
+  grid-area: a;
+  background-color: #ca4040;
+  height: 300px;
+  width: 250px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bm-post img {
+  width: 80%;
+  padding-top: 20px;
+  border-radius: 5px;
+}

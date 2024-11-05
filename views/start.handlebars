@@ -1,6 +1,24 @@
 <h1>Startseite</h1>
 
 <p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
+
+<h2>Login</h2>
+
+<form action="/login" method="POST">
+  E-Mail: <input name="username" type="text" /><br />
+  Passwort: <input name="password" type="password" /><br />
+  <input type="submit" value="Anmelden" />
+</form>
+<a href="/register" class="button">Registrieren</a>
+
+<h2>Registrieren</h2>
+
+<form action="/register" method="POST">
+  E-Mail: <input name="username" type="text" /><br />
+  Passwort: <input name="password" type="password" /><br />
+  <input type="submit" value="Registrieren" />
+</form>
+
 {{#posts}}
 <h3> {{title}} </h3>
 <p>{{picture}}</p>
