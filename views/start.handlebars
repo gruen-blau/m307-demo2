@@ -1,8 +1,6 @@
-<h1>Startseite</h1>
+<h1>Am Beliebtesten</h1>
 
-<p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
-
-<h2>Login</h2>
+<!-- <h2>Login</h2>
 
 <form action="/login" method="POST">
   E-Mail: <input name="username" type="text" /><br />
@@ -17,7 +15,7 @@
   E-Mail: <input name="username" type="text" /><br />
   Passwort: <input name="password" type="password" /><br />
   <input type="submit" value="Registrieren" />
-</form>
+</form> -->
 
 {{#posts}}
 <h3> {{title}} </h3>
@@ -27,7 +25,7 @@
 <p>{{type}}</p>
 <p>{{file}}</p>
 {{/posts}}
-<div class="mainconatiner-start">
+<!-- <div class="mainconatiner-start">
 <div class="karte">
     <div class="karte-inhalt">
     <h3>Benutzer
@@ -39,7 +37,37 @@
 
 </div>
 </div>
-</div>
+</div> -->
+{{#posts}}
+<div class="slider-container">
+        <button class="nav-button prev">&#9664;</button>
+        <div class="slider">
+            <div class="slider-box">
+                <h3 class="user"> {{title}} </h3>
+                <div class="image-placeholder">bild</div>
+                <h3 class="title">Titel</h3>
+                <p class="description">Kurz Beschreibung</p>
+                <div class="interactions">
+                  <p>{{likenumber}}</p>
+                    <button class="like-button">&#9825;</button>
+                </div>
+            </div>
+            <div class="slider-box">
+              <h3 class="user"> {{title}} </h3>
+                <div class="image-placeholder">bild</div>
+                <h3 class="title">Titel</h3>
+                <p class="description">Kurz Beschreibung</p>
+                <div class="interactions">
+                  <p>{{likenumber}}</p>
+                    <button class="like-button">&#9825;</button>
+                </div>
+                
+            </div>
+            <!-- Weitere Boxen hinzufügen -->
+        </div>
+        <button class="nav-button next">&#9654;</button>
+    </div>
+    {{/posts}}
 
 
 {{> contactform}}

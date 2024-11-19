@@ -34,6 +34,14 @@ app.get("/bm-posts", async function (req, res) {
   res.render("bm-posts", {});
 });
 
+app.get("/login", async function (req, res) {
+  res.render("login", {});
+});
+
+app.get("/profile", async function (req, res) {
+  res.render("profile", {});
+});
+
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
 app.listen(3010, () => {
   console.log(`Example app listening at http://localhost:3010`);
