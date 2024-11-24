@@ -1,25 +1,14 @@
-<html lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML5 Boilerplate</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
 
-  <body>
+<form action="/create_post" enctype="multipart/form-data" method="post">
+  <input type="title" name="title" />
+  <input type="file" name="picture" />
+  <input type="text" name="text" />
+  <select id="type" name="type">
+    <option value="BM">BM</option>
+    <option value="MDM">MDM</option>
+  </select>
+  <input type="file" name="file"/>
+  <input type="submit" value="Erstellen"/>
+</form>
 
-    <form action="/create_post" method="post">
-      <input type="title" name="title" />
-      <input type="text" name="picture" />
-      <input type="text" name="text" />
-      <input type="number" name="likenumber" />
-      <input type="text" name="type"/>
-      <input type="file" name="upload"/>
-      <input type="submit" name="submit/>
-    </form>
-    {{{body}}}
-
-  </body>
-
-</html>

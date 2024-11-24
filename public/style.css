@@ -23,6 +23,35 @@ header a {
   font-weight: 200;
 }
 
+.suche ::placeholder{
+color: white;
+font-size: 16px;
+}
+.suche input{
+  background: #5b6857;
+  border: white 2px solid;
+  border-radius: 25px;
+  padding: 2vh 8vh;
+  color: white;
+  font-size: 16px;
+}
+
+.suche button{
+  background: #5b6857;
+  border: white 2px solid;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  padding: 2vh 4vh;
+  transition-duration: 0.4s;
+}
+
+.suche button:hover {
+  background: #454e42;
+
+}
+
+
 h1 {
   font-weight: 800;
   display: flex;
@@ -64,6 +93,28 @@ footer a {
                               Startseite                                                          
 --------------------------------------------------------------------------------------------------*/
 
+
+.button-erstellen{
+  background: #5b6857;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  text-align: center;
+  transition-duration: 0.4s;
+  padding-top: 20px;
+  position: absolute;
+  right: 5vh;
+}
+
+.button-erstellen:hover {
+  background: #454e42;
+
+}
+.button-erstellen a{
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
 .karte {
   background: #5b6857;
   color: white;
@@ -205,3 +256,68 @@ footer a {
   color: #4f5546;
   cursor: pointer;
 }
+
+
+
+/*-------------------------------------------------------------------------------------------------
+                              Login und Registrieren                                                         
+--------------------------------------------------------------------------------------------------*/
+
+.login input{
+background-color: white;
+border: #5b6857 2px solid;
+border-radius: 25px;
+padding: 2vh 8vh;
+color: #5b6857;
+font-size: 16px;
+}
+
+.login ::placeholder{
+  color: white;
+  font-size: 16px;
+  }
+  
+  .login button{
+    background: #5b6857;
+    border: white 2px solid;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    padding: 2vh 4vh;
+    transition-duration: 0.4s;
+  }
+  
+  .login button:hover {
+    background: #454e42;
+  
+  }
+  
+
+  .registrieren input{
+    background-color: white;
+    border: #5b6857 2px solid;
+    border-radius: 25px;
+    padding: 2vh 8vh;
+    color: #5b6857;
+    font-size: 16px;
+    }
+    
+    .registrieren ::placeholder{
+      color: white;
+      font-size: 16px;
+      }
+      
+      .registrieren button{
+        background: #5b6857;
+        border: white 2px solid;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        padding: 2vh 4vh;
+        transition-duration: 0.4s;
+      }
+      
+      .registrieren button:hover {
+        background: #454e42;
+      
+      }

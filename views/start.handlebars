@@ -17,14 +17,7 @@
   <input type="submit" value="Registrieren" />
 </form> -->
 
-{{#posts}}
-<h3> {{title}} </h3>
-<p>{{picture}}</p>
-<p>{{text}}</p>
-<p>{{likenumber}}</p>
-<p>{{type}}</p>
-<p>{{file}}</p>
-{{/posts}}
+
 <!-- <div class="mainconatiner-start">
 <div class="karte">
     <div class="karte-inhalt">
@@ -38,36 +31,27 @@
 </div>
 </div>
 </div> -->
-{{#posts}}
+{{> favorites}}
 <div class="slider-container">
         <button class="nav-button prev">&#9664;</button>
         <div class="slider">
-            <div class="slider-box">
-                <h3 class="user"> {{title}} </h3>
-                <div class="image-placeholder">bild</div>
-                <h3 class="title">Titel</h3>
-                <p class="description">Kurz Beschreibung</p>
-                <div class="interactions">
-                  <p>{{likenumber}}</p>
-                    <button class="like-button">&#9825;</button>
-                </div>
-            </div>
-            <div class="slider-box">
-              <h3 class="user"> {{title}} </h3>
-                <div class="image-placeholder">bild</div>
-                <h3 class="title">Titel</h3>
-                <p class="description">Kurz Beschreibung</p>
-                <div class="interactions">
-                  <p>{{likenumber}}</p>
-                    <button class="like-button">&#9825;</button>
-                </div>
-                
-            </div>
-            <!-- Weitere Boxen hinzufügen -->
-        </div>
-        <button class="nav-button next">&#9654;</button>
-    </div>
-    {{/posts}}
+          {{#posts}}
+            {{> post}}
+          {{/posts}}
 
+        </div>
+        <button id="next-post-button" onclick="moveNextPost" class="nav-button next">&#9654;</button>
+    </div>
+<div class="button-erstellen">
+  <a href="/newpost">
+    <p>+ Erstellen</p>
+  </a>
+</div>
 
 {{> contactform}}
+
+<script>
+  function moveNextPost(){
+
+  }
+</script>

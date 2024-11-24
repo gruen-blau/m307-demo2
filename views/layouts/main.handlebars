@@ -9,12 +9,11 @@
 
   <body>
     <header>
-      <a href="/">Logo</a>
+      <a href="/">smarties</a>
       <a href="/bm-posts">BM</a>
-      <a href="/">MDM</a>
-      <a href="/newpost">+</a>
-      <form action="/suche" method="get">
-        <input type="text" placeholder="Suche..." name="search" />
+      <a href="/mdm-posts">MDM</a>
+      <form action="/suche" method="get" class="suche">
+        <input type="text" placeholder="Suchen" name="search" />
         <button type="submit">Suchen</button>
       </form>
       <a href="/profile" class="profile-button">
@@ -22,12 +21,14 @@
       </a>
     </header>
 
+    <div>
     {{{body}}}
-
+  </div>
+  
     <footer>
-      <a href="/">Logo</a>
-      <a href="/">BM</a>
-      <a href="/">MDM</a>
+      <a href="/">smarties</a>
+      <a href="/bm-posts">BM</a>
+      <a href="/mdm-posts">MDM</a>
       <a href="/impressum">Impressum</a>
     </footer>
   </body>

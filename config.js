@@ -7,12 +7,14 @@ import multer from "multer";
 const upload = multer({ dest: "public/uploads/" });
 import sessions from "express-session";
 import bcrypt from "bcrypt";
+import bbz307 from "bbz307";
+
 
 export function createApp(dbconfig) {
   const app = express();
 
   const pool = new Pool(dbconfig);
-
+  const login = new bbz307.Login('users', ['username', 'passwort', 'profilepicture'], pool);
   app.engine("handlebars", engine());
   app.set("view engine", "handlebars");
   app.set("views", "./views");
@@ -54,7 +56,7 @@ export function createApp(dbconfig) {
     res.render("login");
   });
 
-  app.post("/login", function (req, res) {
+  app.post("/login",upload.none(), function (req, res) {
     pool.query(
       "SELECT * FROM users WHERE username = $1",
       [req.body.username],
@@ -62,15 +64,26 @@ export function createApp(dbconfig) {
         if (error) {
           console.log(error);
         }
-        if (bcrypt.compareSync(req.body.password, result.rows[0].password)) {
+        if (result.rows.length > 0 && req.body.password, result.rows[0].passwort) {
           req.session.userid = result.rows[0].id;
           res.redirect("/");
         } else {
+          console.log(req.body)
           res.redirect("/login");
         }
       }
     );
   });
+  // app.post("/login", upload.none(), async (req, res) => {
+  //   const user = await login.loginUser(req);
+  //   if (!user) {
+  //     res.redirect("/login");
+  //     return;
+  //   } else {
+  //     res.redirect("/intern");
+  //     return;
+  //   }
+  // });
 
   return app;
 }
