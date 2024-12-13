@@ -8,29 +8,34 @@
   </head>
 
   <body>
-<div class="login">
-    <h2>Login</h2>
+    <div class="login-register">
 
-    <form action="/login" enctype="multipart/form-data" method="POST">
-      Benutzername:
-      <input name="username" type="text" /><br />
-      Passwort:
-      <input name="password" type="password" /><br />
-      <input type="submit" value="Anmelden" />
-    </form>
-    <a href="/register" class="button">Registrieren</a>
-  </div>
-  <div class="registrieren">
-    <h2>Registrieren</h2>
+      <div class="login">
+        <h2>Anmelden</h2>
 
-    <form action="/register" method="POST">
-      E-Mail:
-      <input name="username" type="text" /><br />
-      Passwort:
-      <input name="password" type="password" /><br />
-      <input type="submit" value="Registrieren" />
-    </form>
-  </div>
+        <form action="/login" enctype="multipart/form-data" method="POST">
+          Benutzername:
+          <input name="username" type="text" /><br />
+          Passwort:
+          <input name="password" type="password" /><br />
+          <input type="submit" value="Anmelden" />
+        </form>
+        <!-- <a href="/register" class="button">Registrieren</a> -->
+      </div>
+      <div class="registrieren">
+        <h2>Registrieren</h2>
+
+        <form action="/register" method="POST">
+          E-Mail:
+          <input name="username" type="text" /><br />
+          Passwort:
+          <input name="password" type="password" /><br />
+          <input type="submit" value="Registrieren" />
+        </form>
+      </div>
+
+    </div>
+
   </body>
 
 </html>

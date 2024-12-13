@@ -1,14 +1,26 @@
+<div class="newpost">
+  <h2>Post erstellen</h2>
+  <form
+    class="inputs-post"
+    action="/create_post"
+    enctype="multipart/form-data"
+    method="post"
+  >
+    Titel:
+    <input type="title" name="title" />
+    <br />
+    Upload Image:<input type="file" name="picture" />
+    <br />
+    Beschreibung:<input type="text" name="text" />
+    <br />
+    Select:<select id="type" name="type">
+      <option value="BM">BM</option>
+      <option value="MDM">MDM</option>
+    </select>
+    <br />
+    Upload File:<input type="file" name="file" />
+    <br />
+    <input type="submit" value="Erstellen" />
+  </form>
 
-
-<form action="/create_post" enctype="multipart/form-data" method="post">
-  <input type="title" name="title" />
-  <input type="file" name="picture" />
-  <input type="text" name="text" />
-  <select id="type" name="type">
-    <option value="BM">BM</option>
-    <option value="MDM">MDM</option>
-  </select>
-  <input type="file" name="file"/>
-  <input type="submit" value="Erstellen"/>
-</form>
-
+</div>

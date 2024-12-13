@@ -23,11 +23,11 @@ header a {
   font-weight: 200;
 }
 
-.suche ::placeholder{
-color: white;
-font-size: 16px;
+.suche ::placeholder {
+  color: white;
+  font-size: 16px;
 }
-.suche input{
+.suche input {
   background: #5b6857;
   border: white 2px solid;
   border-radius: 25px;
@@ -36,7 +36,7 @@ font-size: 16px;
   font-size: 16px;
 }
 
-.suche button{
+.suche button {
   background: #5b6857;
   border: white 2px solid;
   border-radius: 25px;
@@ -48,9 +48,7 @@ font-size: 16px;
 
 .suche button:hover {
   background: #454e42;
-
 }
-
 
 h1 {
   font-weight: 800;
@@ -93,8 +91,7 @@ footer a {
                               Startseite                                                          
 --------------------------------------------------------------------------------------------------*/
 
-
-.button-erstellen{
+.button-erstellen {
   background: #5b6857;
   width: 200px;
   height: 60px;
@@ -104,13 +101,13 @@ footer a {
   padding-top: 20px;
   position: absolute;
   right: 5vh;
+  margin: 10px;
 }
 
 .button-erstellen:hover {
   background: #454e42;
-
 }
-.button-erstellen a{
+.button-erstellen a {
   color: white;
   text-decoration: none;
   font-size: 30px;
@@ -122,6 +119,7 @@ footer a {
   height: 140vh;
   border-radius: 15px;
 }
+
 .karte-inhalt img {
   height: 40%;
   width: 75%;
@@ -131,12 +129,57 @@ footer a {
   padding-left: 20px;
 }
 
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-section h3 {
+  margin-bottom: 10px;
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.comments-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-form button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #5b6857;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+  background-color: #454e42;
+}
+
 .grid-bm {
   padding-top: 20px;
   display: grid;
   grid-gap: 15px;
   grid-auto-flow: dense;
-  margin-top: 10px;
+  margin: 10px;
   padding-left: 1%;
   padding-right: 1%;
   padding-bottom: 4%;
@@ -204,6 +247,7 @@ footer a {
   background-color: #eaeaea;
   padding: 20px;
   margin: 10px;
+  margin-top: 0;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -257,67 +301,139 @@ footer a {
   cursor: pointer;
 }
 
+.favorites {
+  background-color: #666;
+  width: 80px;
+  height: auto;
+  color: white;
+  padding: 20px;
+}
 
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.newpost {
+  border: #5b6857 2px solid;
+  border-radius: 15px;
+  margin: 20px;
+  color: #5b6857;
+  padding: 10px;
+  width: 70%;
+}
+
+.newpost form {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  gap: 5px; /* Add spacing between elements */
+}
+
+.newpost input,
+.newpost select,
+.newpost input[type="submit"] {
+  margin-top: 5px; /* Add space between labels and inputs */
+  padding: 5px; /* Add padding inside the inputs */
+  border: 1px solid #5b6857; /* Match border color */
+  border-radius: 5px; /* Rounded edges for inputs */
+  font-size: 14px; /* Adjust text size for inputs */
+}
 
 /*-------------------------------------------------------------------------------------------------
                               Login und Registrieren                                                         
 --------------------------------------------------------------------------------------------------*/
-
-.login input{
-background-color: white;
-border: #5b6857 2px solid;
-border-radius: 25px;
-padding: 2vh 8vh;
-color: #5b6857;
-font-size: 16px;
+.login-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  flex-wrap: wrap;
 }
 
-.login ::placeholder{
+.login {
+  border: #5b6857 2px solid;
+  border-radius: 15px;
+  margin: 20px;
+  color: #5b6857;
+  padding: 10px;
+  width: 50%;
+}
+
+.login input {
+  background-color: white;
+  border: #5b6857 2px solid;
+  border-radius: 25px;
+  padding: 2vh 8vh;
+  color: #5b6857;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.login ::placeholder {
   color: white;
   font-size: 16px;
-  }
-  
-  .login button{
-    background: #5b6857;
-    border: white 2px solid;
-    border-radius: 25px;
-    color: white;
-    font-size: 16px;
-    padding: 2vh 4vh;
-    transition-duration: 0.4s;
-  }
-  
-  .login button:hover {
-    background: #454e42;
-  
-  }
-  
+}
 
-  .registrieren input{
-    background-color: white;
-    border: #5b6857 2px solid;
-    border-radius: 25px;
-    padding: 2vh 8vh;
-    color: #5b6857;
-    font-size: 16px;
-    }
-    
-    .registrieren ::placeholder{
-      color: white;
-      font-size: 16px;
-      }
-      
-      .registrieren button{
-        background: #5b6857;
-        border: white 2px solid;
-        border-radius: 25px;
-        color: white;
-        font-size: 16px;
-        padding: 2vh 4vh;
-        transition-duration: 0.4s;
-      }
-      
-      .registrieren button:hover {
-        background: #454e42;
-      
-      }
+.login button {
+  background: #5b6857;
+  border: white 2px solid;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  padding: 2vh 4vh;
+  transition-duration: 0.4s;
+}
+
+.login button:hover {
+  background: #454e42;
+}
+
+.registrieren {
+  border: #5b6857 2px solid;
+  border-radius: 15px;
+  margin: 20px;
+  color: #5b6857;
+  padding: 10px;
+  width: 50%;
+}
+
+.registrieren input {
+  background-color: white;
+  border: #5b6857 2px solid;
+  border-radius: 25px;
+  padding: 2vh 8vh;
+  color: #5b6857;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.registrieren ::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.registrieren button {
+  background: #5b6857;
+  border: white 2px solid;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  padding: 2vh 4vh;
+  transition-duration: 0.4s;
+}
+
+.registrieren button:hover {
+  background: #454e42;
+}
+
+.contactform {
+  padding: 10px 10px 10px 0;
+  margin: 10px;
+}
+
+.contactform input {
+  margin: 2% 0 2% 0;
+}
